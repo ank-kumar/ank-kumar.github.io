@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+const { title, description = '' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href={base + "/favicon.svg"} />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <slot />
+  <footer>
+    <div class="wrap">
+      <p>
+        <a href={base + '/'}>Writing</a>
+        <a href="https://ank-kumar.github.io/">Ank Kumar</a>
+        <a href="https://ank-kumar.github.io/ank-kumar-photo-contributions/">Photographs</a>
+        <a href="https://ank-kumar.github.io/video-contributions/">Video</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

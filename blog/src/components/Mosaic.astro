@@ -1,0 +1,13 @@
+---
+import fs from 'node:fs';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+let files = [];
+try {
+  files = fs.readdirSync('public/mosaic').filter((f) => /\.(jpe?g|png|webp)$/i.test(f));
+} catch (e) { files = []; }
+files.sort();
+const tiles = files.length ? [...files, ...files, ...files].slice(0, 54) : [];
+---
+<div class="tiles" aria-hidden="true">
+  {tiles.map((f) => <img src={base + '/mosaic/' + f} alt="" loading="lazy" />)}
+</div>

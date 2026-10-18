@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Mosaic from '../components/Mosaic.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title="Writing — Ank Kumar" description="Essays and notes on technology, geopolitics, economy and travel by Ank Kumar.">
+  <div class="hero">
+    <Mosaic />
+    <div class="words">
+      <div class="wrap">
+        <h1>PLACEHOLDER — your sentence goes here.</h1>
+        <p>One line of support underneath it.</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="wrap">
+      <h2>{posts.length} {posts.length === 1 ? 'piece' : 'pieces'}</h2>
+      <ul class="posts">
+        {posts.map((p) => (
+          <li>
+            <h3><a href={base + '/' + p.id + '/'}>{p.data.title}</a></h3>
+            <p class="thesis">{p.data.thesis}</p>
+            <p class="meta"><b>{p.data.topic}</b> · {p.data.type} · {fmt(p.data.pubDate)}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </main>
+</Base>

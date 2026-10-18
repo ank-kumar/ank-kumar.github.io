@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const file = 'src/data/blog/' + post.id + '.md';
+const repo = 'https://github.com/ank-kumar/blog';
+const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={post.data.title + ' — Ank Kumar'} description={post.data.thesis}>
+  <main>
+    <div class="wrap read">
+      <article>
+        <h1>{post.data.title}</h1>
+        <p class="thesis">{post.data.thesis}</p>
+        <p class="meta"><b>{post.data.topic}</b> · {post.data.type} · {fmt(post.data.pubDate)}</p>
+        <div class="body"><Content /></div>
+      </article>
+
+      <div class="editbar" hidden id="editbar">
+        <a href={repo + '/edit/main/' + file}>Edit</a>
+        <a href={repo + '/edit/main/' + file}>Unpublish (set draft: true)</a>
+        <a href={repo + '/delete/main/' + file}>Delete</a>
+        <a href={repo + '/commits/main/' + file}>History</a>
+      </div>
+    </div>
+  </main>
+  <script is:inline>
+    if (new URLSearchParams(location.search).has('edit')) {
+      var b = document.getElementById('editbar'); if (b) b.hidden = false;
+    }
+  </script>
+</Base>
