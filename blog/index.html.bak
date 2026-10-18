@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Writing — Ank Kumar</title>
+  <meta name="description" content="Essays and notes on technology, geopolitics, economy and travel by Ank Kumar.">
+  <link rel="canonical" href="https://ank-kumar.github.io/blog/">
+  <style>
+:root{--ink:#14213D;--paper:#FFFFFF;--mist:#EEF1F5;--rule:#D3D9E2;--blue:#2E5FB8;--muted:#5A6577;--abyss:#08181F}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Aptos,"Aptos Display","Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+h1,h2{font-weight:600;letter-spacing:-.01em}
+h2{font-size:22px;margin:0 0 6px}
+.lede{max-width:72ch;color:var(--muted);margin:0 0 18px;font-size:15px}
+.hero{position:relative;background:var(--abyss);overflow:hidden;height:min(72vh,680px);min-height:380px}
+.wall{position:absolute;inset:-6% -4%;display:flex;flex-direction:column;justify-content:center;gap:12px;transform:rotate(-4deg) scale(1.08);overflow:hidden}
+.row{display:flex;gap:12px;width:max-content;animation:drift 90s linear infinite}
+.row img{width:auto;height:110px;object-fit:cover;display:block;flex-shrink:0}
+.row:nth-child(2){animation:drift 125s linear infinite reverse}
+.row:nth-child(3){animation:drift 105s linear infinite}
+.row:nth-child(4){animation:drift 140s linear infinite reverse}
+.row:nth-child(5){animation:drift 95s linear infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.row{animation:none}}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(8,24,31,.25) 0%,rgba(8,24,31,.6) 45%,var(--abyss) 97%)}
+.hero-in{position:relative;z-index:2;pointer-events:none;padding-top:140px;padding-bottom:56px;width:100%}
+.hero h1{font-size:clamp(36px,6vw,84px);line-height:.98;margin:0;color:#fff}
+.hero .sub{font-size:clamp(15px,1.6vw,18px);color:#C9D7DC;max-width:48ch;margin:20px 0 0}
+main{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px) 90px}
+section{padding-top:64px}
+.posts{list-style:none;padding:0;margin:0}
+.posts li{padding:26px 0;border-top:1px solid var(--rule)}
+.posts li:last-child{border-bottom:1px solid var(--rule)}
+.posts h3{font-weight:600;font-size:23px;line-height:1.3;margin:0 0 6px}
+.posts h3 a{color:var(--ink)}
+.posts .thesis{margin:0;color:var(--muted);max-width:72ch;font-size:15px}
+.meta{margin:10px 0 0;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.meta b{font-weight:600;color:var(--ink)}
+footer{max-width:1180px;margin:0 auto;padding:36px clamp(16px,4vw,40px) 56px;color:var(--muted);font-size:13px;border-top:1px solid var(--rule)}
+footer p{max-width:72ch;margin:0 0 14px}
+footer a{margin-right:20px}
+.copy{float:right;margin-left:24px}
+@media (max-width:700px){.hero-in{padding-top:100px}.copy{float:none;display:block;margin:0 0 12px}}
+  </style>
+</head>
+<body>
+<section class="hero">
+  <div class="wall" aria-hidden="true">
+    <div class="row">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-02.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-03.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-04.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-05.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-06.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-02.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-03.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-04.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-05.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-06.jpg" alt="">
+    </div>
+    <div class="row">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-07.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-08.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-09.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-10.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-11.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-07.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-08.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-09.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-10.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-11.jpg" alt="">
+    </div>
+    <div class="row">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-12.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-13.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-14.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-15.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-16.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-12.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-13.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-14.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-15.jpg" alt="">
+      <img src="./mosaic/ankkumar-zurich-eprix-2018-16.jpg" alt="">
+    </div>
+    <div class="row">
+      <img src="./mosaic/img-1391_202610.jpg" alt="">
+      <img src="./mosaic/img-1458_202610.jpg" alt="">
+      <img src="./mosaic/img-1464_202610.jpg" alt="">
+      <img src="./mosaic/img-3180_202610.jpg" alt="">
+      <img src="./mosaic/img-3198_202610.jpg" alt="">
+      <img src="./mosaic/img-1391_202610.jpg" alt="">
+      <img src="./mosaic/img-1458_202610.jpg" alt="">
+      <img src="./mosaic/img-1464_202610.jpg" alt="">
+      <img src="./mosaic/img-3180_202610.jpg" alt="">
+      <img src="./mosaic/img-3198_202610.jpg" alt="">
+    </div>
+    <div class="row">
+      <img src="./mosaic/img-3770_202610.jpg" alt="">
+      <img src="./mosaic/img-4880_202610.jpg" alt="">
+      <img src="./mosaic/img-4881_202610.jpg" alt="">
+      <img src="./mosaic/Ank_K_1594480756.jpg" alt="">
+      <img src="./mosaic/Ank_K_1597931743.jpg" alt="">
+      <img src="./mosaic/img-3770_202610.jpg" alt="">
+      <img src="./mosaic/img-4880_202610.jpg" alt="">
+      <img src="./mosaic/img-4881_202610.jpg" alt="">
+      <img src="./mosaic/Ank_K_1594480756.jpg" alt="">
+      <img src="./mosaic/Ank_K_1597931743.jpg" alt="">
+    </div>
+  </div>
+  <div class="hero-in wrap">
+    <h1>PLACEHOLDER — your sentence goes here.</h1>
+    <p class="sub">One line of support underneath it.</p>
+  </div>
+</section>
+<main>
+  <section>
+    <h2>2 pieces</h2>
+    <p class="lede">Essays and notes on technology, geopolitics, economy and travel.</p>
+    <ul class="posts">
+      <li>
+        <h3><a href="/blog/placeholder-replace-or-delete-before-deploy/">PLACEHOLDER — replace or delete before deploy</a></h3>
+        <p class="thesis">The one-line thesis sits here. It is the highest-leverage element on the page.</p>
+        <p class="meta"><b>Tech</b> · Post · 18 October 2026</p>
+      </li>
+      <li>
+        <h3><a href="/blog/placeholder-a-second-entry/">PLACEHOLDER — a second entry, to check the index list</a></h3>
+        <p class="thesis">A different topic and type, so the metadata line can be checked against a real variation.</p>
+        <p class="meta"><b>Geopolitics</b> · Brief · 17 October 2026</p>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <p>
+    <a href="/blog/">Writing</a>
+    <a href="https://ank-kumar.github.io/">Ank Kumar</a>
+    <a href="https://ank-kumar.github.io/ank-kumar-photo-contributions/">Photographs</a>
+    <a href="https://ank-kumar.github.io/video-contributions/">Video</a>
+  </p>
+  <p class="copy">© 2026, Ank Kumar</p>
+</footer>
+</body>
+</html>
